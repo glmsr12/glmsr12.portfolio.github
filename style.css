@@ -32,6 +32,8 @@ p {
 	font-weight: 300;
 	letter-spacing: 0.05rem;
 }
+
+
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
@@ -455,49 +457,81 @@ p {
 /* End About Section */
 
 /* contact Section */
-#contact .contact {
-	flex-direction: column;
-	max-width: 1200px;
-	margin: 40px auto;
+
+
+#contact .contact{
 	width: 100%;
-	
-}
-#contact .contact-items {
-	/* max-width: 400px; */
-	width: 400px;
-}
-#contact .contact-item {
-	width: 80%;
+	max-width: 1000px;
 	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
 	padding: 30px;
-	margin: 30px;
+	margin: 80px auto;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
 	box-shadow: 0px 0px 18px 0 #0000002c;
 	transition: 0.3s ease box-shadow;
 }
-#contact .contact-item:hover {
-	box-shadow: 0px 0px 5px 0 black;
+
+#contact .contact:hover {
+	box-shadow: 0px 0px 10px 0 rgb(112, 4, 112);
 }
-#contact .icon {
-	width: 70px;
-	margin: 50px auto;
-	margin-bottom: 10px;
-}
-#contact .contact-info h1 {
-	font-size: 2.5rem;
+
+#contact .form-group {
+	font-size: 3rem;
 	font-weight: 500;
-	margin-top: 60px;
+	margin-top: 30px;
+	
 }
-#contact .contact-info h2 {
-	font-size: 1.3rem;
-	line-height: 2rem;
-	font-weight: 500;
+
+.form-group input,
+.form-group textarea{
+	width: 100%;
+	padding: 10px;
+	font-size: 2rem;
+	margin-top: 10px;
+	
 }
+
+textarea{
+	resize: vertical;
+
+}
+
+#contact button{
+ width: 100%;
+ border: none;
+ outline: none;
+ padding: 20px;
+ font-size: 3rem;
+ border-radius: 8px;
+ color: black;
+ cursor: pointer;
+}
+
+#status{
+	width: 90%;
+	max-width: 500px;
+	text-align: center;
+	padding: 20px;
+	margin: 20px auto;
+	font-size: 2rem;
+	border-radius: 8px;
+
+}
+
+.success{
+	background-color: rgb(133, 201, 32);
+	animation: status 4s ease forwards;
+}
+
+.error {
+	background-color: rgb(218, 80, 80);
+	animation: status 4s ease forwards;
+}
+
 /*End contact Section */
 
 
@@ -573,6 +607,22 @@ p {
 		font-weight: 500;
 	}
 }
+
+@keyframes status{
+   0%{
+	   opacity: 1;
+	   pointer-events: all;
+   }
+   90% {
+	   opacity: 1;
+	   pointer-events: all;
+   }
+   100%{
+	   opacity: 0;
+	   pointer-events: none;
+   }
+}
+
 /* End Keyframes */
 
 /* Media Query For Tablet */
@@ -645,36 +695,19 @@ p {
 	/* End About */
 	/* contact  */
 	#contact .contact {
-		flex-direction: column;
+		display: flex;
+		flex-direction: center;
 		padding: 100px 0;
 		align-items: center;
 		justify-content: center;
 		min-width: 20vh;
 	}
-	#contact .contact-items {
+	
+	#contact .form-group{
 		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		margin: 0;
+		
 	}
-	#contact .contact-item {
-		width: 30%;
-		margin: 0;
-		flex-direction: row;
-	}
-	#contact .contact-item .icon {
-		height: 100px;
-		width: 100px;
-	}
-	#contact .contact-item .icon img {
-		object-fit: contain;
-	}
-	#contact .contact-item .contact-info {
-		width: 100%;
-		text-align: left;
-		padding-left: 20px;
-	}
+	
 	/* End contact  */
 }
 /* End Media Query For Tablet */
